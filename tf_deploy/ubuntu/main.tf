@@ -15,7 +15,7 @@ resource "aws_instance" "ubuntu_client" {
   ami                         = data.aws_ami.latest.id
   instance_type               = "t2.micro"
   associate_public_ip_address = true
-  key_name                    = "Krypton-20191020"
+  key_name                    = "krypton-20211014"
   vpc_security_group_ids      = ["sg-02c6b717bafd9e093"]
 
   tags = {
