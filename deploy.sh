@@ -7,7 +7,7 @@ read -r ans
 case "$ans" in
     1)
         pushd tf_deploy/ubuntu
-            summon -p ring.py -f ../../secrets.yml terraform apply
+            summon -p ring.py -f ../../secrets-new.yml terraform apply
         popd
         ;;
     2)

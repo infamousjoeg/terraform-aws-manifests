@@ -1,4 +1,19 @@
-provider "aws" {}
+provider "conjur" {}
+
+# Get the AWS Access Key ID from Conjur
+data "conjur_secret" "aws_access_key_id" {
+  name = "SyncVault/LOB_CD/D-CD-Terraform/Cloud Service-AWSAccessKeys-terraform/username"
+}
+# Get the AWS Secret Access Key from Conjur
+data "conjur_secret" "aws_secret_access_key" {
+  name = "SyncVault/LOB_CD/D-CD-Terraform/Cloud Service-AWSAccessKeys-terraform/password"
+}
+
+provider "aws" {
+  access_key = "${data.conjur_secret.aws_access_key_id.value}"
+  secret_key = "${data.conjur_secret.aws_secret_access_key.value}"
+  region = "us-east-1"
+}
 
 # Save AMI ID to data.aws_ami.latest.id
 data "aws_ami" "latest" {

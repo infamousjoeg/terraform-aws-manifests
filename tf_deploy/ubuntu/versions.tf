@@ -3,5 +3,8 @@ terraform {
 
   required_providers {
     aws = ">= 3.39"
+    conjur = {
+      source  = "cyberark/conjur"
+    }
   }
 }
