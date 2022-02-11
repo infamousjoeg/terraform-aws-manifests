@@ -1,13 +1,13 @@
 #!/bin/bash
 set -eou pipefail
 
-echo "Which EC2 instance to test deployment?"
+echo "Which EC2 instance to deploy?"
 echo -n "[1] Ubuntu [2] RHEL [3] Windows: "
 read -r ans
 case "$ans" in
     1)
-        pushd tf_deploy/ubuntu
-            summon -p ring.py -f ../../secrets-new.yml terraform plan
+        pushd ubuntu
+            summon -p summon-conjur -f ../secrets-new.yml terraform apply
         popd
         ;;
     2)

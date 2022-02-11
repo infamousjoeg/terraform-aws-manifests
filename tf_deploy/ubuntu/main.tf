@@ -10,8 +10,8 @@ data "conjur_secret" "aws_secret_access_key" {
 }
 
 provider "aws" {
-  access_key = "${data.conjur_secret.aws_access_key_id.value}"
-  secret_key = "${data.conjur_secret.aws_secret_access_key.value}"
+  access_key = data.conjur_secret.aws_access_key_id.value
+  secret_key = data.conjur_secret.aws_secret_access_key.value
   region = "us-east-1"
 }
 
