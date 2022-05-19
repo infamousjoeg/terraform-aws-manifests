@@ -2,7 +2,7 @@ provider "conjur" {}
 
 # Get the AWS Access Key ID from Conjur
 data "conjur_secret" "aws_access_key_id" {
-  name = "SyncVault/LOB_CD/D-CD-Terraform/Cloud Service-AWSAccessKeys-terraform/username"
+  name = "SyncVault/LOB_CD/D-CD-Terraform/Cloud Service-AWSAccessKeys-terraform/awsaccesskeyid"
 }
 # Get the AWS Secret Access Key from Conjur
 data "conjur_secret" "aws_secret_access_key" {
