@@ -7,7 +7,7 @@ read -r ans
 case "$ans" in
     1)
         pushd ubuntu
-            summon -p summon-conjur -f ../secrets-new.yml terraform apply
+            summon -p summon-conjur -f ../../secrets-new.yml terraform apply
         popd
         ;;
     2)
