@@ -9,5 +9,8 @@ terraform {
     conjur = {
       source  = "cyberark/conjur"
     }
+    acme = {
+      source = "vancluever/acme"
+    }
   }
 }

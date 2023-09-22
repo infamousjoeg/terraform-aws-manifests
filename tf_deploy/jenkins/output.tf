@@ -17,8 +17,3 @@ output "tags_assigned" {
   description = "All tags assigned to the EC2 instance"
   value       = aws_instance.jenkins.tags_all
 }
-
-output "cloudflare_record" {
-  description = "Cloudflare record for Jenkins"
-  value       = cloudflare_record.jenkins.name
-}

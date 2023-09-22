@@ -14,7 +14,7 @@ variable "cloudflare_zone_id" {
   description = "Cloudflare Zone ID"
 }
 
-data "cloudflare_zone" "this" {
+data "cloudflare_zone" "infamousdevops" {
   zone_id = var.cloudflare_zone_id
 }
 
