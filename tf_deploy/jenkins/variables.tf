@@ -17,3 +17,21 @@ variable "cloudflare_zone_id" {
 data "cloudflare_zone" "this" {
   zone_id = var.cloudflare_zone_id
 }
+
+locals {
+  region = "us-east-1"
+  instance_type = "t3.medium"
+  key_name = "cyberark-pasaas"
+  iam_instance_profile = "AllowEC2AccessS3demo-state-store"
+  vpc_security_group_ids = [
+    "sg-02c6b717bafd9e093",
+    "sg-07922b3d9943dbcfb",
+    "sg-0002bcd921109a02a"
+  ]
+  associate_public_ip_address = true
+  tags = {
+    Name = "Jenkins"
+    role = "cicd"
+    cloudflare_dns = "jenkins.joegarcia.dev"
+  }
+}
