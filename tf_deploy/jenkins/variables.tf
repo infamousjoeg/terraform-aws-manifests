@@ -32,6 +32,6 @@ locals {
   tags = {
     Name = "Jenkins"
     role = "cicd"
-    cloudflare_dns = "jenkins.joegarcia.dev"
+    cloudflare_dns = "jenkins.infamousdevops.com"
   }
 }

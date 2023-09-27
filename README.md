@@ -1,12 +1,47 @@
-# terraform-aws-manifests
+# terraform-aws-manifests <!-- omit in toc -->
 
-## Deploy EC2 Instance
+- [General](#general)
+  - [Help](#help)
+  - [Deploy All](#deploy-all)
+- [Jenkins](#jenkins)
+  - [Plan](#plan)
+  - [Apply](#apply)
+  - [Destroy](#destroy)
+- [License](#license)
 
-Execute `./deploy` and choose an option.
+## General
 
-## Terminate EC2 Instance
+### Help
 
-Execute `./terminate` and choose an option.
+```bash
+make help
+```
+
+### Deploy All
+
+```bash
+make all
+```
+
+## Jenkins
+
+### Plan
+
+```bash
+make jenkins/plan
+```
+
+### Apply
+
+```bash
+make jenkins/apply
+```
+
+### Destroy
+
+```bash
+make jenkins/destroy
+```
 
 ## License
 

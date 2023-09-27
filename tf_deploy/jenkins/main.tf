@@ -63,6 +63,7 @@ resource "aws_instance" "jenkins" {
       "set -e",
       # Update packages and add Jenkins repo
       "sudo yum update -y",
+      "sudo yum install -y git",
       "sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo",
       "sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key",
       "sudo yum upgrade -y",
